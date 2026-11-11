@@ -40,14 +40,14 @@ I also wanted to understand what a web framework *actually* does. So I built the
 
 ```mermaid
 flowchart LR
-    B["🌐 Browser<br/>localhost:8080"] -->|"raw HTTP request"| S["accept() loop<br/>Winsock2"]
+    B["Browser<br/>localhost:8080"] -->|"raw HTTP request"| S["accept loop<br/>Winsock2"]
     S --> P["Parse request line<br/>method + path"]
-    P -->|"GET"| G["handle_get_*()<br/>render form"]
+    P -->|"GET"| G["handle_get_<br/>render form"]
     P -->|"POST"| F["Find body after CRLF CRLF<br/>url_decode + extract_value"]
-    F --> E["Engines<br/>match score · salary · roadmap"]
-    E --> R["serve_page()<br/>HTML + shared layout & tabs"]
+    F --> E["Engines<br/>match score, salary, roadmap"]
+    E --> R["serve_page<br/>HTML + shared layout and tabs"]
     G --> R
-    R -->|"send_response()"| B
+    R -->|"send_response"| B
 ```
 
 ## ▸ Engineering highlights

@@ -1,0 +1,12 @@
+# Build output
+*.exe
+*.obj
+*.o
+
+# Bundled toolchains (download TinyCC separately)
+tcc/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
